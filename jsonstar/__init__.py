@@ -1,4 +1,5 @@
 import json as stdlib_json
+
 from jsonstar.encoder import JSONEncoderStar
 
 

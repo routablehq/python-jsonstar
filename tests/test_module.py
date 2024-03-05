@@ -1,6 +1,7 @@
 from datetime import datetime
-import jsonstar
 from io import StringIO
+
+import jsonstar
 
 
 class TestJSONFunctions:
