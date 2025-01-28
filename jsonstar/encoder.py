@@ -56,7 +56,7 @@ class JSONEncoderStar(stdlib_json.JSONEncoder, metaclass=EncoderMeta):
         if cls is JSONEncoderStar:
             return cls._default_typed_encoders
         else:
-            return TypedEncoderRegistry(ChainMap(cls.__base__.default_typed_encoders(), cls._default_typed_encoders))
+            return TypedEncoderRegistry(ChainMap(cls._default_typed_encoders, cls.__base__.default_typed_encoders()))
 
     @property
     def functional_encoders(self):
